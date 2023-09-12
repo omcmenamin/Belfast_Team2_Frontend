@@ -1,8 +1,6 @@
-import { Request, Response } from "express";
 const express = require('express');
 const path = require('path');
 const nunjucks = require('nunjucks');
-const session =require('express-session')
 //const { title } = require('process');
 
 const app = express();
@@ -21,7 +19,7 @@ nunjucks.configure(appViews, nunjucksConfig);
 //configure Express
 app.set('view engine', 'html');
 
-app.use('/public',express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use(express.json())
 
