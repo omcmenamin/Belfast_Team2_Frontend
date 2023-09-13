@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{job.JobRoleName}} Specification</title>
+    <title>Specification</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -11,16 +11,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>{{job.jobRoleName}}</h1>
+                    <h1>{{jobSpec.jobRole}}</h1>
                 </div>
             </div>
         </div>
     </header>
     <main class="container mt-4">
         <section id="product" class="mt-4">
-            {% if job %}
-                <h2>specification</h2>
-                {{ job.specifications }}
+            {% if jobSpec %}
+                <h2>Specification</h2>
+                {{ jobSpec.specifications }}
 
                 <!-- <h2>Price</h2>
                 {{ product.price }} -->
