@@ -19,11 +19,17 @@
     <main class="container mt-4">
         <section id="product" class="mt-4">
             {% if jobSpec %}
-                <h2>Specification</h2>
-                {{ jobSpec.specifications }}
+                <div class="card">
 
-                <!-- <h2>Price</h2>
-                {{ product.price }} -->
+                    <div class="card-body">
+                      <h4 class="card-title">Specification</h4>
+                      <p class="card-text">
+                        {{ jobSpec.specifications }}
+                      </p>
+                    </div>
+                    
+                  </div>
+
             {% else %}
                 Could Not find job specification
             {% endif %}
