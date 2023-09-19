@@ -14,7 +14,7 @@ module.exports = function (app: Application){
         try{
             const jwtToken = await authService.login(data);
 
-            res.cookie('jwtToken', jwtToken, { maxAge: 3600000, httpOnly: true }); 
+            res.cookie('jwtToken', jwtToken, { maxAge: 28800, httpOnly: true }); 
 
             res.redirect('/');
 
@@ -37,7 +37,7 @@ module.exports = function (app: Application){
         try{
             await authService.register(data)
 
-            res.redirect('/login')
+            res.redirect('/login?success_msg=You are now registered and can log in');
 
         }catch (e) {
             console.error(e);
