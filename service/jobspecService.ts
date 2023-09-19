@@ -3,6 +3,10 @@ const axios = require('axios');
 require('dotenv').config();
 
 module.exports.getJobspecById = async function (id: number): Promise<JobSpec> {
+    if(id == null){
+        throw new Error('Invalid ID')
+    }
+    
     try {
         const response = await axios.get(process.env.URL+'/job-specification/'+ id);
         return response.data;

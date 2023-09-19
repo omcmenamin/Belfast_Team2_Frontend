@@ -60,5 +60,17 @@ describe('JobSpecService', function () {
           expect(error).to.equal('Job does not exist')
       })
 
+      it('should not call axios when id is null', async () => {
+        let error;
+
+        try {
+          await JobSpecService.getJobspecById(null);
+        } catch (e) {
+          error = e.message
+        }
+        
+        expect(error).to.equal('Invalid ID')
+    })
+
     })
 })
