@@ -1,4 +1,4 @@
 export class JobSpec{
-    jobRole? : string
-    specifications? : string
+    jobRole : string
+    specifications : string
 }
