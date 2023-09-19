@@ -12,9 +12,11 @@ module.exports = function (app: Application){
         let data: Login = req.body
 
         try{
-            req.session.token = await authService.login(data)
+            const jwtToken = await authService.login(data);
 
-            res.redirect('/')
+            res.cookie('jwtToken', jwtToken, { maxAge: 3600000, httpOnly: true }); 
+
+            res.redirect('/');
 
         }catch (e) {
             console.error(e);
