@@ -30,18 +30,16 @@
 
                     <div class="card-body">
                         <h4 class="card-title">Responsibilities</h4>
-                        <ul class="list-group">    
+                        <ul class="list-group">
                             <li class="list-group-item">{{jobSpec.responsibilities[0]}}</li>
                             <li class="list-group-item">{{jobSpec.responsibilities[1]}}</li>
                             <li class="list-group-item">Vestibulum at eros</li>
-                          </ul>
-                      </div>
-                    
+                          </ul> 
+                      </div> 
                   </div>
-
-            {% else %}
-                Could Not find job specification
-            {% endif %}
+                {% else %}
+                        Could Not find job specification
+                {% endif %}
         </section>
     </main>  
 </body>
