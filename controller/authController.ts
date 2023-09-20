@@ -19,7 +19,6 @@ module.exports = function (app: Application){
             res.redirect('/');
 
         }catch (e) {
-            console.error(e);
 
             res.locals.errormessage = e.message
 

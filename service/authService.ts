@@ -4,11 +4,12 @@ require('dotenv').config();
 
 module.exports.login = async function (login: Login): Promise<ActiveSession>{
     try{
-        const response= await axios.post(process.env.URL+'/login/'+login)
+        const response= await axios.post(process.env.URL+'/login/', login)
         
         return response.data
     }catch (e) {
-       
+        console.error(e);
+
         throw new Error ('Unable to Login')
        
     }
@@ -16,7 +17,7 @@ module.exports.login = async function (login: Login): Promise<ActiveSession>{
 
 module.exports.register = async function (user: User): Promise<void>{
     try{
-        const response= await axios.post(process.env.URL+'/register/'+user)
+        const response= await axios.post(process.env.URL+'/register/', user)
         
         return response.data
     }catch (e) {
