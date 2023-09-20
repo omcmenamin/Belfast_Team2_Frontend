@@ -7,7 +7,7 @@ module.exports.getJobspecById = async function (id: number): Promise<JobSpec> {
     }
     
     try {
-        const response = await axios.get(process.env.URL+'/job-specification/'+ id);
+        const response = await axios.get(process.env.API_URL+'/api/job-specification/'+ id);
         return response.data;
     } catch (e) {
         if(e.response.status === 404){

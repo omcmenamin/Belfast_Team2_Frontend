@@ -3,6 +3,7 @@ var MockAdapter = require('axios-mock-adapter');
 var chai = require('chai');  
 const expect = chai.expect;
 
+
 const JobSpecService = require('../../../service/jobspecService');
 
 const JobSpec = {
@@ -16,7 +17,7 @@ describe('JobSpecService', function () {
         var mock = new MockAdapter(axios);
 
 
-        mock.onGet(process.env.URL+'/job-specification/'+ id).reply(200, JobSpec);
+        mock.onGet(process.env.API_URL+'/api/job-specification/'+ id).reply(200, JobSpec);
 
         var result = await JobSpecService.getJobspecById(id);
 
@@ -27,7 +28,7 @@ describe('JobSpecService', function () {
         let id = 1
         var mock = new MockAdapter(axios);
 
-        mock.onGet(process.env.URL+'/job-specification/'+ id).reply(500);
+        mock.onGet(process.env.API_URL+'/api/job-specification/'+ id).reply(500);
 
         var error;
 
@@ -46,7 +47,7 @@ describe('JobSpecService', function () {
   
           const data = JobSpec;
   
-          mock.onGet(process.env.URL+'/job-specification/'+ id).reply(404);
+          mock.onGet(process.env.API_URL+'/api/job-specification/'+ id).reply(404);
   
           let error;
   
