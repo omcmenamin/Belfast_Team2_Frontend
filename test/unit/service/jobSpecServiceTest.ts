@@ -2,7 +2,6 @@ var axios = require('axios');
 var MockAdapter = require('axios-mock-adapter');
 var chai = require('chai');  
 const expect = chai.expect;
-require('dotenv').config();
 
 const JobSpecService = require('../../../service/jobspecService');
 

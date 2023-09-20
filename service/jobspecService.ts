@@ -1,6 +1,5 @@
 import { JobSpec } from '../model/jobSpec';
 const axios = require('axios');
-require('dotenv').config();
 
 module.exports.getJobspecById = async function (id: number): Promise<JobSpec> {
     if(id == null){
