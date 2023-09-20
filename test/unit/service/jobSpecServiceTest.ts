@@ -41,13 +41,13 @@ describe('JobSpecService', function () {
         expect(error).to.equal('Could not get Job Specification')
       })
 
-      it('should throw 400 exception when 400 error Employee does not exist', async () => {
+      it('should throw 404 exception when 404 error Employee does not exist', async () => {
         var id = 676767
         var mock = new MockAdapter(axios);
   
           const data = JobSpec;
   
-          mock.onGet(process.env.URL+'/job-specification/'+ id).reply(400);
+          mock.onGet(process.env.URL+'/job-specification/'+ id).reply(404);
   
           let error;
   
