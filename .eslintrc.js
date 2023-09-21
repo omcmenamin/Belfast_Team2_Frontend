@@ -39,6 +39,6 @@ module.exports = {
       'package-lock.json',
       'tsconfig.json',
       'README.md',
-      '.eslintc.js'
+      '.eslintrc.js'
   ]
 }
