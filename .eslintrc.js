@@ -32,5 +32,12 @@ module.exports = {
     'react/display-name': 0,
     '@typescript-eslint/return-await': 0
   },
-  ignorePatterns: 'dist/'
+  ignorePatterns: [
+      'dist/',
+      'node_modukes/',
+      'package.json',
+      'package-lock.json',
+      'tsconfig.json',
+      'README.md'
+  ]
 }
