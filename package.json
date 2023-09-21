@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start1": "npx tsc && cp -R views dist && node dist/app.js",
     "test": "mocha -require ts-node/register test/unit/**/*.ts",
     "test-ui": "mocha -require ts-node/register --timeout 10000 test/ui/**/*.ts"
     "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js && gulp",
