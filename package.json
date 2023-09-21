@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npx tsc && cp -R views dist && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"**/*.js\" && eslint \"**/*.ts\"",
-    "lint-fix": "eslint \"**/*.js\" --fix && eslint \"**/*.ts\" --fix"
+    "lint": "eslint . --ext js,ts",
+    "lint-fix": "eslint . --ext js,ts --fix"
   },
   "author": "",
   "license": "ISC",
