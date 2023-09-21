@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const nunjucks = require('nunjucks');
@@ -30,8 +29,10 @@ app.listen(3000, ()=> {
     console.log('Server listening on port 3000');
 });
 
-app.get('/', (req, res) => {
-  res.send('hello world')
-})
+app.get('/academy', (req, res) => {
+  res.render('academy')
+});
 
 require('./controller/jobspecController')(app);
+  res.render('index')
+});

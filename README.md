@@ -15,3 +15,4 @@ Frontend Code for Kainos Academy Project.
 
 ## Run Tests
 1. Run `npm test`
+
