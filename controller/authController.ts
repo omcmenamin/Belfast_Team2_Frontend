@@ -4,9 +4,11 @@ import {Login, Register} from "../model/auth";
 const authService = require('../service/authService')
 
 module.exports = function (app: Application){
+    
     app.get('/login', async (req: Request, res: Response)=>{
         res.render('login')
     })
+    
 
     app.post('/login', async (req: Request, res: Response)=> {
         let data: Login = req.body
@@ -36,9 +38,8 @@ module.exports = function (app: Application){
         try{
             await authService.register(data)
 
-            res.redirect('/login?success_msg=You are now registered and can log in');
-
-        }catch (e) {
+            res.redirect('/login');
+        } catch (e) {
             console.error(e);
 
             res.locals.errormessage = e.message
@@ -46,4 +47,6 @@ module.exports = function (app: Application){
             res.render('register', req.body)
         }
     })
+    
 }
+
