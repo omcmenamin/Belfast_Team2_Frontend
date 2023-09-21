@@ -34,7 +34,7 @@ module.exports = {
   },
   ignorePatterns: [
       'dist/',
-      'node_modukes/',
+      'node_modules/',
       'package.json',
       'package-lock.json',
       'tsconfig.json',
