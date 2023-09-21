@@ -34,5 +34,7 @@ module.exports = {
         "@typescript-eslint/return-await": 0,
         "react-hooks/rules-of-hooks": 2,
         "react-hooks/exhaustive-deps": 2
-    }
+    },
+    "ignorePatterns": "node_modules/",
+    "ignorePatterns": "dist/",
 }
