@@ -1,5 +1,5 @@
 import { Request, Response, Application } from "express-serve-static-core";
-import {Login, User} from "../model/auth";
+import {Login, Register} from "../model/auth";
 
 const authService = require('../service/authService')
 
@@ -31,7 +31,7 @@ module.exports = function (app: Application){
     })
 
     app.post('/register', async (req: Request, res: Response)=> {
-        let data: User = req.body
+        let data: Register = req.body
 
         try{
             await authService.register(data)

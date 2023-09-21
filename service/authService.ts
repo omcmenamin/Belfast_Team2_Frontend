@@ -1,4 +1,4 @@
-import {Login, ActiveSession, User } from "../model/auth";
+import {Login, ActiveSession, Register } from "../model/auth";
 const axios =require('axios');
 require('dotenv').config();
 
@@ -15,9 +15,9 @@ module.exports.login = async function (login: Login): Promise<ActiveSession>{
     }
 }
 
-module.exports.register = async function (user: User): Promise<void>{
+module.exports.register = async function (register: Register): Promise<void>{
     try{
-        const response= await axios.post(process.env.URL+'/register/', user)
+        const response= await axios.post(process.env.URL+'/register/', register)
         
         return response.data
     }catch (e) {

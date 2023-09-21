@@ -3,7 +3,7 @@ export class Login{
     password: string
 }
 
-export class User{
+export class Register{
     email: string
     password: string
     role: string
