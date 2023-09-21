@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const nunjucks = require('nunjucks');
@@ -31,5 +30,8 @@ app.listen(3000, ()=> {
 });
 
 app.get('/', (req, res) => {
-  res.send('hello world')
-})
+  res.render('index')
+});
+app.get('/academy', (req, res) => {
+  res.render('academy')
+});
