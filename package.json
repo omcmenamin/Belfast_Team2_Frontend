@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  
   "license": "ISC",
   "dependencies": {
     "@types/express-session": "^1.17.7",
@@ -20,22 +19,20 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.5.7",
-    "typescript": "^5.2.2",
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-sass": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.1.0",
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-jpeg-recompress": "^6.0.0",
-    "imagemin-pngquant": "^7.0.0"
-    
+    "imagemin-pngquant": "^7.0.0",
+    "typescript": "^5.2.2"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omcmenamin/Belfast_Team2_Frontend.git"
