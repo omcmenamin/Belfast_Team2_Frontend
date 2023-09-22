@@ -1,21 +1,21 @@
 // node.js Packages / Dependencies
 const gulp          = require('gulp');
-const sass          = require('gulp-sass');
+const sass          = require('gulp-dart-sass');
 const uglify        = require('gulp-uglify');
 const rename        = require('gulp-rename');
 const concat        = require('gulp-concat');
 const cleanCSS      = require('gulp-clean-css');
 const imageMin      = require('gulp-imagemin');
-const pngQuint      = require('imagemin-pngquant'); 
+const pngQuint      = require('imagemin-pngquant');
 const browserSync   = require('browser-sync').create();
 const autoprefixer  = require('gulp-autoprefixer');
-const jpgRecompress = require('imagemin-jpeg-recompress'); 
+const jpgRecompress = require('imagemin-jpeg-recompress');
 const clean         = require('gulp-clean');
 
 
 // Paths
 var paths = {
-    root: { 
+    root: {
         www:        './public'
     },
     src: {
@@ -39,7 +39,7 @@ var paths = {
 // Compile SCSS
 gulp.task('sass', function() {
     return gulp.src(paths.src.scss)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) 
+    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.src.root + '/css'))
     .pipe(browserSync.stream());
@@ -99,7 +99,7 @@ gulp.task('watch', function() {
     browserSync.init({
         server: {
             baseDir: paths.root.www
-        } 
+        }
     })
     gulp.watch(paths.src.scss, gulp.series('sass'));
     gulp.watch(paths.src.js).on('change', browserSync.reload);
