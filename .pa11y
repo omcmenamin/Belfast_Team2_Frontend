@@ -1,7 +1,6 @@
 {
     "standard": "WCAG2AAA",
     "level": "error",
-    "includeWarnings": true,
     "defaults": {
         "timeout": 500000,
         "wait": 2000,
@@ -9,7 +8,7 @@
     },
     "urls": [
         {
-            "url": "http://localhost:3000",
+            "url": "https://8adv5cmjj9.eu-west-1.awsapprunner.com/",
             "viewport": {
                 "width": 1920,
                 "height": 1080
