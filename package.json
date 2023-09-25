@@ -7,7 +7,7 @@
     "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js && gulp",
     "test": "mocha -require ts-node/register test/unit/**/*.ts",
     "test-ui": "mocha -require ts-node/register --timeout 10000 test/ui/**/*.ts",
-    "test-pa11y": "pa11y-ci --config .pa11y"
+    "test-pa11y": "--config .pa11y"
   },
   "author": "",
   "license": "ISC",
