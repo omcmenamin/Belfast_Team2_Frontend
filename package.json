@@ -10,7 +10,6 @@
     "test-pa11y": "./node_modules/.bin/pa11y-ci --config .pa11y"
   },
   "author": "",
-  
   "license": "ISC",
   "dependencies": {
     "@types/express-session": "^1.17.7",
@@ -41,9 +40,7 @@
     "gulp-uglify": "^3.0.2",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^7.0.0"
-    
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omcmenamin/Belfast_Team2_Frontend.git"
