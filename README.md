@@ -16,3 +16,6 @@ Frontend Code for Kainos Academy Project.
 ## Run Tests
 1. Run `npm test`
 
+## Run Accessibility Tests
+1. Webpage URIs must be added to the .pa11y file
+2. Run `npm run test-pa11y`
