@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{jobSpec.jobRole}} Specification</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{jobSpec.jobRole}}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <section id="product" class="mt-4">
+            {% if jobSpec %}
+                <div class="card">
+
+                    <div class="card-body">
+                      <h4 class="card-title">Specification</h4>
+                      <p class="card-text">
+                        {{ jobSpec.specifications }}
+                      </p>
+                      <a href={{jobSpec.sharePointLink}} target="_blank">Share Point Link</a> 
+                    </div>
+
+                    <div class="card-body">
+                        <h4 class="card-title">Responsibilities</h4>
+                        <ul class="list-group">
+                            {% for item in jobSpec.responsibilities %}
+                            <li class="list-group-item">{{ item }}</li>
+                            {% else %}
+                                <li class="list-group-item">This would display if the 'item' collection were empty</li>
+                            {% endfor %}
+                          </ul> 
+                      </div> 
+                  </div>
+                {% else %}
+                        Could Not find job specification
+                {% endif %}
+        </section>
+    </main>  
+</body>
+</html>
