@@ -1,14 +1,13 @@
 {
   "name": "belfast-team2-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend Code for Kainos Academy Project.",
   "main": "index.js",
   "scripts": {
     "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js && gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  
   "license": "ISC",
   "dependencies": {
     "@types/express-session": "^1.17.7",
@@ -33,9 +32,7 @@
     "gulp-uglify": "^3.0.2",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^7.0.0"
-    
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omcmenamin/Belfast_Team2_Frontend.git"

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Job Roles List</title>
+        <link rel="stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <header class="bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Job Roles</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="job-roles" class="mt-4">
+                <h2>Listed Job Roles</h2>
+                {% if job-roles and job-roles.length > 0 %}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Job Role</th>
+                            <th scope="col">Band</th>
+                            <th scope="col">Specifications</th>
+                            <th scope="col">Responsibilities</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for job-roles in job-roles %}
+                        <tr>
+                            <td>{{ job-roles.productName }}</td>
+                            <td>{{ product.productDesc }}</td>
+                            <td>{{ product.price }}</td>
+                            <td><a href='products/{{ product.productID }}'>View</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                there are no products.
+                {% endif %}
+            </section>
+        </main>
+    </body>
+</html>
