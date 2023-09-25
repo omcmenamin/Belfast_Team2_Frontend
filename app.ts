@@ -5,6 +5,7 @@ const path = require('path');
 const nunjucks = require('nunjucks');
 const session =require('express-session')
 
+
 const app = express();
 
 //configure nunjucks
@@ -35,6 +36,7 @@ declare module "express-session"{
     }
 }
 
+
 app.listen(3000, ()=> {
     console.log('Server listening on port 3000');
 });
@@ -44,3 +46,4 @@ app.get('/', (req, res) => {
 })
 
 require('./controller/authController')(app);
+
