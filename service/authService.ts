@@ -18,7 +18,7 @@ module.exports.login = async function (login: Login): Promise<ActiveSession>{
 module.exports.register = async function (register: Register): Promise<void>{
     try{
         const response= await axios.post(process.env.URL+'/register/', register)
-        
+
         return response.data
     }catch (e) {
         throw new Error ('Registration failure, please try again and make sure to enter a valid email and password')
