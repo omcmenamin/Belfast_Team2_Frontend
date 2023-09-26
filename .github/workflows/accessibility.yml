@@ -14,9 +14,6 @@ jobs:
         steps:
         - uses: actions/checkout@v2
 
-        - name: Build dependencies
-          run: npm install
-
         - name: Build webpage
           run: npm run start
       
