@@ -1,0 +1,19 @@
+{
+    "standard": "WCAG2AAA",
+    "level": "error",
+    "defaults": {
+        "timeout": 500000,
+        "wait": 2000,
+        "ignore": []
+    },
+    "urls": [
+        {
+            "pageName": "Home Page",
+            "url": "https://8adv5cmjj9.eu-west-1.awsapprunner.com/",
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            }
+        }
+    ]
+}
