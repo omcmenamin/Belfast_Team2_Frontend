@@ -13,6 +13,9 @@ jobs:
       
         steps:
         - uses: actions/checkout@v2
+
+        - name: Setup
+          run: npm install
       
         - name: Run Accessibility Tests
           run: npm run test-pa11y
