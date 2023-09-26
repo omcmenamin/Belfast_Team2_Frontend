@@ -19,3 +19,5 @@ jobs:
       
         - name: Run Accessibility Tests
           run: npm run test-pa11y
+          env:
+            PA11Y_TEST: ${{secrets.PA11Y_TEST}}
