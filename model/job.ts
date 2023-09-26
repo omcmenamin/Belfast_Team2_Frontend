@@ -1,7 +1,9 @@
 export class Job{
     jobID : number
-    jobRole : String
-    band : String
-    specifications : String
+    jobRoleName : String
+    bandID : number
+    capabilityID : number
+    jobSpecification : String
     responsibilities : String
+    sharePointLink : String
 }
