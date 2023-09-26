@@ -7,7 +7,7 @@
     "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js && gulp",
     "test": "mocha -require ts-node/register test/unit/**/*.ts",
     "test-ui": "mocha -require ts-node/register --timeout 10000 test/ui/**/*.ts",
-    "test-pa11y": "./node_modules/.bin/pa11y-ci --config .pa11y"
+    "test-pa11y": "pa11y-ci --config .pa11y.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -31,7 +31,7 @@
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
@@ -39,7 +39,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-jpeg-recompress": "^6.0.0",
-    "imagemin-pngquant": "^7.0.0"
+    "imagemin-pngquant": "^7.0.0",
+    "pa11y-ci": "^3.0.1"
   },
   "repository": {
     "type": "git",

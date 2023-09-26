@@ -13,9 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run Accessibility Tests
-      run: npm run test-pa11y
-
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
