@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Job Role</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Create New Job Role</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <section id="product" class="mt-4">
+                <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Create New Job Role</h4>
+                      <p class="card-text">
+                        Job Roles
+                      </p>
+                      <a href={{createJob.sharePointLink}} target="_blank">Share Point Link</a> 
+                    </div>
+                    <div class="container">
+                        <p>Enter job role details</p>
+                        <form action="/job-roles" method="post">
+                            <div class="form-group">
+                                <label for="jobRoleName">JobRoleName</label>
+                                <input type="text" min="0" max="60" step="any" id="jobRoleName" name="jobRoleName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bandID">BandID</label>
+                                <input type="number" min="0" step="any" id="BandID" name="BandID" class="form-control" value="{{ BandID }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="capabilityID">CapabilityID</label>
+                                <input type="number" min="0" max="60" step="any" id="capabilityID" name="capabilityID" class="form-control" value="{{ capabilityID }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobSpecification">Specifications</label>
+                                <input type="text" min="0" max="60" step="any" id="jobSpecification" name="jobSpecification" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="responsibilities">Responsibilities</label>
+                                <input type="text" min="0" max="60" step="any" id="responsibilities" name="responsibilities" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sharePointLink">Sharepoint Link</label>
+                                <input type="text" min="0" max="60" step="any" id="sharePointLink" name="sharePointLink" class="form-control"required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                  </div>
+        </section>
+    </main>  
+</body>
+</html>
