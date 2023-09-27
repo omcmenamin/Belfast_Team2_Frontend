@@ -1,0 +1,23 @@
+name: Run accessibility tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+    build:
+      
+        runs-on: ubuntu-latest
+      
+        steps:
+        - uses: actions/checkout@v2
+
+        - name: Setup
+          run: npm install
+      
+        - name: Run Accessibility Tests
+          run: npm run test-pa11y
+          env:
+            PA11Y_TEST: ${{secrets.PA11Y_TEST}}
