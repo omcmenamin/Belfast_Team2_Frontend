@@ -34,3 +34,4 @@ app.get('/academy', (req, res) => {
 });
 
 require('./controller/jobspecController')(app);
+require('./controller/capabilityLeadController')(app);

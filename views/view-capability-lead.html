@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{capabilityLead.capabilityName}} Capability</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{capabilityLead.capabilityName}}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <section id="product" class="mt-4">
+            {% if capabilityLead %}
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Capability Lead Name</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Photo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>{{capabilityLead.capabilityLeadName}}</td>
+                    <td>{{capabilityLead.capabilityLeadMessage}}</td>
+                    <td><img width="150px" height="95px" src="{{capabilityLead.capabilityLeadPhotoURL}}" alt="{{capabilityLead.capabilityLeadName}}"></td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+                {% else %}
+                        Could Not find capability lead
+                {% endif %}
+        </section>
+    </main>  
+</body>
+</html>

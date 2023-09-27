@@ -1,5 +1,5 @@
 import { JobSpec } from '../model/jobSpec';
-const axios = require('axios');
+let axios = require('axios');
 
 module.exports.getJobspecById = async function (id: number): Promise<JobSpec> {
     if(id == null){
