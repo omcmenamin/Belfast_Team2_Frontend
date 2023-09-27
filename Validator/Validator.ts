@@ -10,7 +10,7 @@ import { Login } from "../model/auth";
         }
     
         if (login.password.length < 8 || login.password.length > 64) {
-            return "Password length between 8 and 64 characters";
+            return "Password length not between 8 and 64 characters";
         }
     
         return null;
