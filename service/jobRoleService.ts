@@ -3,7 +3,7 @@ import { JobRole } from '../model/jobRole';
 
 
 
-module.exports.getJobRoles = async function(): Promise<JobRole> {
+module.exports.getJobRoles = async function(): Promise<JobRole[]> {
     try {
         const response = await axios.get(process.env.API_URL+'/api/job-roles');
         return response.data;
