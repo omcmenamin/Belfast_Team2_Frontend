@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- font icons -->
+    <link rel="stylesheet" href="public/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+    <link rel="stylesheet" href="public/creative-studio.css">
+
+    <meta charset="UTF-8">
+    <title>Your Kainos story starts here</title>
+    <link type="image/x-icon"
+        href="https://cdn.phenompeople.com/CareerConnectResources/pp/KAINGB/en_gb/desktop/assets/images/favicon.ico"
+        rel="icon" data-ph-id="ph-page-element-page24-SpBhhG">
+    <link rel="preload" as="image" importance="high"
+        href="https://cdn.phenompeople.com/CareerConnectResources/pp/KAINGB/images/cropChild-SoQGk-1653562074041.png"
+        id="ph_image_preload">
+
+    <!--Mobile optimisation-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-light" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="public/images/kainos_logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="create-job-roles">Jobs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Training</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">People</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+
+    <main class="container mt-4">
+        <section id="product" class="mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Create New Job Role!</h4>
+                </div>
+                <div class="container">
+                    <p>Enter job role details</p>
+                    <form action="/create-job-roles" method="post">
+                        <div class="form-group">
+                            <label for="jobRoleName">Job Role Name</label>
+                            <input type="text" min="0" max="60" step="any" id="jobRoleName" name="jobRoleName"
+                                class="form-control" required>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <div class="form-group">
+                                <label for="Band">Band</label>
+                                <select id="bandID" name="Band" class="form-control" required>
+                                    <option value="1">Apprentice</option>
+                                    <option value="2">Trainee</option>
+                                    <option value="3">Associate</option>
+                                    <option value="4">Senior Associate</option>
+                                    <option value="5">Consultant</option>
+                                    <option value="6">Manager</option>
+                                    <option value="7">Principal</option>
+                                    <option value="8">Leadership Community</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobSpecification">Specifications</label>
+                            <input type="text" min="0" max="60" step="any" id="jobSpecification" name="jobSpecification"
+                                class="form-control" required>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <div class="form-group">
+                                <label for="Capability">Capability</label>
+                                <select id="capababilityID" name="Capability" class="form-control" required>
+                                    <option value="1">Engineering</option>
+                                    <option value="2">Cyber Security</option>
+                                    <option value="3">Quality Assurance</option>
+                                </select>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ CapabilityName }}">Action</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="responsibilities">Responsibilities</label>
+                            <input type="text" min="0" max="60" step="any" id="responsibilities" name="responsibilities"
+                                class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sharePointLink">Sharepoint Link</label>
+                            <input type="text" min="0" max="60" step="any" id="sharePointLink" name="sharePointLink"
+                                class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- core  -->
+    <script src="public/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="public/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="public/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="public/js/creative-studio.js"></script>
+
+</body>
+
+</html>

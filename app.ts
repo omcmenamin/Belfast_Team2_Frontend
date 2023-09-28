@@ -40,6 +40,9 @@ declare module "express-session"{
 app.listen(3000, ()=> {
     console.log('Server listening on port 3000');
 });
+app.get('/', (req, res) => {
+  res.render('index')
+});
 
 app.get('/', (req, res) => {
   res.render('index')
@@ -48,5 +51,6 @@ app.get('/academy', (req, res) => {
   res.render('academy')
 });
 require('./controller/jobspecController')(app);
+require('./controller/createJobController')(app);
 require('./controller/jobRoleController')(app);
 require('./controller/authController')(app);
