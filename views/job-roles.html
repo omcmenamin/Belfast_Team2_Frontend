@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- font icons -->
+    <link rel="stylesheet" href="public/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+    <link rel="stylesheet" href="public/creative-studio.css">
+
+    <meta charset = "UTF-8">
+    <title>Your Kainos story starts here</title>
+    <link type="image/x-icon" href="https://cdn.phenompeople.com/CareerConnectResources/pp/KAINGB/en_gb/desktop/assets/images/favicon.ico" rel="icon" data-ph-id="ph-page-element-page24-SpBhhG">
+    <link rel="preload" as="image" importance="high" href="https://cdn.phenompeople.com/CareerConnectResources/pp/KAINGB/images/cropChild-SoQGk-1653562074041.png" id="ph_image_preload">
+
+    <!--Mobile optimisation-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-light" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="public/images/kainos_logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Jobs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="academy">Academy</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Training Courses</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Career Lattice</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+
+    <!-- Page Header -->
+    <header class="header-3">
+        <div class="overlay">
+            <h1 class="title">Kainos</h1>
+            <h6 class="subtitle">Jobs, start your search...</h6> <!-- Insert which page you are working on here! -->
+            <div class="buttons text-center">
+                <a href="#contact" class="btn btn-outline-light rounded w-lg btn-lg my-1">Contact Us</a>
+                <a href="/login.html" class="btn btn-outline-light rounded w-lg btn-lg my-1">Logout</a>
+            </div>              
+        </div>      
+    </header>
+    <!-- End Of Page Header -->
+
+    <main class = "container mt-4">
+        <section id="jobRoles" class="mt-4">
+            <h2>Job Roles</h2>
+            {% if jobRoles and jobRoles.length > 0 %}
+            <table class ="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Job Role</th>
+                        <th scope="col">Job Specification</th>
+                        <th scope="col">Band</th>
+                        <th scope="col">More</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for jobRole in jobRoles %}
+                <tr>
+                    <td>{{ jobRole.jobRoleName }}</td>
+                    <td>{{ jobRole.jobSpecification }}</td>
+                    <td>{{ jobRole.bandID }}</td>
+                    <td><a href="view-job-spec">More</a></td>                     
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+            {% else %}
+            There are no Job Roles.
+            {% endif %}
+        </section>
+    </main>
+
+   
+    <!-- Facts Section -->
+    <section class="has-bg-img bg-img-2">
+        <div class="container text-center">
+            <h6 class="section-subtitle">We Are Awesome</h6>
+                <div class="widget-2">
+                    <div class="widget-item">
+                        <i class="ti-cup"></i>
+                        <h6 class="title">Achieve</h6>
+                        <div class="subtitle">your goals</div>
+                    </div>
+                    <div class="widget-item">
+                        <i class="ti-face-smile"></i>
+                        <h6 class="title">Our</h6>
+                        <div class="subtitle">Culture</div>
+                    </div>
+                    <div class="widget-item">
+                        <i class="ti-blackboard"></i>
+                        <h6 class="title">Winning</h6>
+                        <div class="subtitle">team</div>
+                    </div>
+                    <div class="widget-item">
+                        <i class="ti-comments-smiley"></i>
+                        <h6 class="title">Our</h6>
+                        <div class="subtitle">Academy</div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="infos">
+                    <h6 class="section-subtitle">Get Here</h6>
+                    <h6 class="section-title mb-4">Contact Us</h6>
+
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Belfast</h5>
+                            <p>4-6 Upper Cresent, Belfast BT7 1NT</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>(028) 9057-1100</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>info@kainos.com</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-world"></i>
+                        <div class="mb-0">
+                            <h5>https://www.kainos.com</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form">
+                    <h6 class="section-subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="contact-message" id="" cols="30" rows="7" class="form-control form-control-lg" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+
+    
+
+    <!-- core  -->
+    <script src="public/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="public/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="public/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Studio js -->
+    <script src="public/js/creative-studio.js"></script>
+
+</body>
+</html>
+
