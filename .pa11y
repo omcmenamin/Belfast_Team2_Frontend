@@ -1,0 +1,11 @@
+{
+    "defaults": {
+        "timeout": 1000
+    },
+    "urls": [
+        {
+            "url": "http://localhost:3000",
+            "timeout": 50000
+        }
+    ]
+}
