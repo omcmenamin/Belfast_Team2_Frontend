@@ -5,15 +5,25 @@ const createJobService = require('../service/createJobService')
 
 module.exports = function(app: Application){
 
-    app.post('/job-roles', async (req: Request, res: Response) =>{
-        let data:createJob;
+    app.get('/create-job-roles', async (req: Request, res: Response) =>{
+        res.render('create-job-roles')
+    })
+
+    app.post('/create-job-roles', async (req: Request, res: Response) =>{
+        let data:createJob = req.body
+        let id: Number
 
         try {
-            data = await createJobService.createJob()
-            res.render('create-job-roles', {createJob: data})
+            id = await createJobService.createJob(data)
+
+            res.redirect('/')
         } catch (e) {
-            res.status(404).render("404-error-page");
+            console.error(e);
+
+            res.locals.errormessage = e.message
+            res.render('create-job-roles', req.body)
         }
+        
     })
 
 }
