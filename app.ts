@@ -1,6 +1,10 @@
+import { ActiveSession } from "./model/auth";
+
 const express = require('express');
 const path = require('path');
 const nunjucks = require('nunjucks');
+const session =require('express-session')
+
 
 const app = express();
 
@@ -25,6 +29,14 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }));
 
+
+declare module "express-session"{
+    interface SessionData{
+        token: ActiveSession
+    }
+}
+
+
 app.listen(3000, ()=> {
     console.log('Server listening on port 3000');
 });
@@ -38,3 +50,4 @@ app.get('/academy', (req, res) => {
 
 require('./controller/jobspecController')(app);
 require('./controller/jobRoleController')(app);
+require('./controller/authController')(app);
