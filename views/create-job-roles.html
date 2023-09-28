@@ -65,14 +65,14 @@
                     <p>Enter job role details</p>
                     <form action="/create-job-roles" method="post">
                         <div class="form-group">
-                            <label for="JobRoleName">Job Role Name</label>
+                            <label for="jobRoleName">Job Role Name</label>
                             <input type="text" min="0" max="60" step="any" id="jobRoleName" name="jobRoleName"
                                 class="form-control" required>
                         </div>
                         <div class="dropdown d-inline-block">
                             <div class="form-group">
                                 <label for="Band">Band</label>
-                                <select id="Band" name="Band" class="form-control" required>
+                                <select id="bandID" name="Band" class="form-control" required>
                                     <option value="1">Apprentice</option>
                                     <option value="2">Trainee</option>
                                     <option value="3">Associate</option>
@@ -85,14 +85,14 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="JobSpecification">Specifications</label>
+                            <label for="jobSpecification">Specifications</label>
                             <input type="text" min="0" max="60" step="any" id="jobSpecification" name="jobSpecification"
                                 class="form-control" required>
                         </div>
                         <div class="dropdown d-inline-block">
                             <div class="form-group">
                                 <label for="Capability">Capability</label>
-                                <select id="Capability" name="Capability" class="form-control" required>
+                                <select id="capababilityID" name="Capability" class="form-control" required>
                                     <option value="1">Engineering</option>
                                     <option value="2">Cyber Security</option>
                                     <option value="3">Quality Assurance</option>
@@ -103,12 +103,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="Responsibilities">Responsibilities</label>
+                            <label for="responsibilities">Responsibilities</label>
                             <input type="text" min="0" max="60" step="any" id="responsibilities" name="responsibilities"
                                 class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="SharePointLink">Sharepoint Link</label>
+                            <label for="sharePointLink">Sharepoint Link</label>
                             <input type="text" min="0" max="60" step="any" id="sharePointLink" name="sharePointLink"
                                 class="form-control" required>
                         </div>

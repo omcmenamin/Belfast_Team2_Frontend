@@ -1,9 +1,11 @@
 import { createJob } from '../model/createJob';
 const axios = require('axios');
 
-module.exports.createJob = async function (Job : createJob ) {
+module.exports.createJob = async function (Job : createJob) {
     try {
-        const response = await axios.post(process.env.API_URL+'/api/create-job-roles', createJob);
+        console.log(JSON.stringify(Job))
+        const response = await axios.post(process.env.API_URL+'api/create-job-roles', Job);
+
         return response.data;
     } catch (e) {
         if(e.response.status === 500){
