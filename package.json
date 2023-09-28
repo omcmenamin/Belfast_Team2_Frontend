@@ -7,7 +7,8 @@
     "start": "npx tsc && cp -R views dist && cp -R public dist && node dist/app.js && gulp",
     "test": "mocha -require ts-node/register test/unit/**/*.ts",
     "test-ui": "mocha -require ts-node/register --timeout 10000 test/ui/**/*.ts",
-    "test-pa11y": "pa11y-ci --config .pa11y.conf.js"
+    "test-pa11y": "pa11y-ci --config .pa11y.conf.js",
+    "local-pa11y-test": "pa11y-ci --config .pa11y"
   },
   "author": "",
   "license": "ISC",
@@ -47,7 +48,6 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omcmenamin/Belfast_Team2_Frontend.git"
