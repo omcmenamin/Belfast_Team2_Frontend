@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <!-- font icons -->
-    <link rel="stylesheet" href="/public/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="public/vendors/themify-icons/css/themify-icons.css">
 
     <!-- Bootstrap + Creative Studio main styles -->
-    <link rel="stylesheet" href="/public/creative-studio.css">
+    <link rel="stylesheet" href="public/creative-studio.css">
 
     <meta charset = "UTF-8">
     <title>Your Kainos story starts here</title>
@@ -22,7 +22,7 @@
     <nav class="navbar custom-navbar navbar-expand-lg navbar-light" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/public/images/kainos_logo.png">
+                <img src="public/images/kainos_logo.png">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
@@ -64,42 +64,36 @@
     </header>
     <!-- End Of Page Header -->
 
-    <main class="container mt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>{{jobSpec.jobRole}}</h1>
-                </div>
-            </div>
-        </div>
-        <section id="product" class="mt-4">
-            {% if jobSpec %}
-                <div class="card">
+    <main class = "container mt-4">
+        <section id="jobRoles" class="mt-4">
+            <h2>Job Roles</h2>
+            {% if jobRoles and jobRoles.length > 0 %}
+            <table class ="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Job Role</th>
+                        <th scope="col">Job Specification</th>
+                        <th scope="col">Band</th>
+                        <th scope="col">More</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for jobRole in jobRoles %}
+                <tr>
+                    <td>{{ jobRole.jobRoleName }}</td>
+                    <td>{{ jobRole.jobSpecification }}</td>
+                    <td>{{ jobRole.bandID }}</td>
+                    <td><a href="/job-specification/{{jobRole.jobID}}">More</a></td>                     
+                    </tr>
+                {% endfor %}
 
-                    <div class="card-body">
-                      <h4 class="card-title">Specification</h4>
-                      <p class="card-text">
-                        {{ jobSpec.specifications }}
-                      </p>
-                      <a href={{jobSpec.sharePointLink}} target="_blank">Share Point Link</a> 
-                    </div>
-
-                    <div class="card-body">
-                        <h4 class="card-title">Responsibilities</h4>
-                        <ul class="list-group">
-                            {% for item in jobSpec.responsibilities %}
-                            <li class="list-group-item">{{ item }}</li>
-                            {% else %}
-                                <li class="list-group-item">This would display if the 'item' collection were empty</li>
-                            {% endfor %}
-                          </ul> 
-                      </div> 
-                  </div>
-                {% else %}
-                        Could Not find job specification
-                {% endif %}
+                </tbody>
+            </table>
+            {% else %}
+            There are no Job Roles.
+            {% endif %}
         </section>
-    </main>  
+    </main>
 
    
     <!-- Facts Section -->

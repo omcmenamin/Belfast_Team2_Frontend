@@ -1,7 +1,6 @@
 var axios = require('axios');
 var MockAdapter = require('axios-mock-adapter');
 var chai = require('chai');  
-const expect = chai.expect;
 
 
 const JobSpecService = require('../../../service/jobspecService');
@@ -21,7 +20,7 @@ describe('JobSpecService', function () {
 
         var result = await JobSpecService.getJobspecById(id);
 
-        expect(result).to.deep.equal(JobSpec)
+        chai.expect(result).to.deep.equal(JobSpec)
       })
 
       it('should throw exception when 500 error returned from axios', async () => {
@@ -38,7 +37,7 @@ describe('JobSpecService', function () {
           var error = e.message
         }
         
-        expect(error).to.equal('Could not get Job Specification')
+        chai.expect(error).to.equal('Could not get Job Specification')
       })
 
       it('should throw 404 exception when 404 error Employee does not exist', async () => {
@@ -57,7 +56,7 @@ describe('JobSpecService', function () {
              error = e.message
           }
           
-          expect(error).to.equal('Job does not exist')
+          chai.expect(error).to.equal('Job does not exist')
       })
 
       it('should not call axios when id is null', async () => {
@@ -69,7 +68,7 @@ describe('JobSpecService', function () {
           error = e.message
         }
         
-        expect(error).to.equal('Invalid ID')
+        chai.expect(error).to.equal('Invalid ID')
     })
 
     })
