@@ -47,7 +47,6 @@ app.get('/', (req, res) => {
 app.get('/academy', (req, res) => {
   res.render('academy')
 });
-
 require('./controller/jobspecController')(app);
 require('./controller/jobRoleController')(app);
 require('./controller/authController')(app);
